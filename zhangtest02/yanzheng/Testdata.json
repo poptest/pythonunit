@@ -1,0 +1,22 @@
+{
+  "number_1": {
+      "num1": 1,
+      "num2": 2,
+      "exp_val": 2
+  },
+  "number_2": {
+      "num1": 2,
+      "num2": 3,
+      "exp_val": 6
+  },
+  "number_3": {
+      "num1": 1,
+      "num2": -2,
+      "exp_val": -2
+  },
+  "number_4": {
+      "num1": 0,
+      "num2": 0,
+      "exp_val": 0
+  }
+}
