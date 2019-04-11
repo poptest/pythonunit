@@ -1,7 +1,7 @@
 # -*- encoding:utf-8 -*-
 import requests
 import json
-from junyi.config import TEL_LOCTION_URL, TEL_USER_KEY
+from junyi.TelLocation.config import TEL_LOCTION_URL, TEL_USER_KEY
 
 class TelLocationUtil():
 

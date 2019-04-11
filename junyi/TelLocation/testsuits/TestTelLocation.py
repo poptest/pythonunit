@@ -1,5 +1,5 @@
 import unittest
-from junyi.utils.tellocation import TelLocationUtil
+from junyi.TelLocation.utils.tellocation import TelLocationUtil
 from ddt import ddt, file_data
 
 
