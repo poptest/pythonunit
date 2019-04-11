@@ -1,0 +1,22 @@
+{
+  "senario_1": {
+      "num1": 1,
+      "num2": 2,
+      "exp_val": 3
+  },
+  "senario_2": {
+      "num1": 1.4,
+      "num2": 2.9,
+      "exp_val": 4.3
+  },
+  "senario_3": {
+      "num1": 1,
+      "num2": -2,
+      "exp_val": -1
+  },
+  "senario_4": {
+      "num1": 0,
+      "num2": 0,
+      "exp_val": 0
+  }
+}
