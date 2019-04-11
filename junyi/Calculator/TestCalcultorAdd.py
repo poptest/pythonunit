@@ -1,7 +1,7 @@
 import unittest
 from ddt import ddt, file_data
 
-from junyi.Calcultor import Calcultor
+from junyi.Calculator.Calcultor import Calcultor
 
 
 @ddt
