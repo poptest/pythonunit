@@ -7,7 +7,7 @@ from junyi.homework.lrjs import LiRunJiSuan
 
 class MyTestCase(unittest.TestCase):
 
-    # 测试月利润为-1万
+    # 月利润为-1万
     def test_case01(self):
 
         # 1. 测试准备测试数据
