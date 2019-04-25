@@ -20,13 +20,13 @@ class LiRunJiSuan():
     def __jisuan_jiangjin(cls, jiangjin):
         if jiangjin >= 0 and jiangjin < 10:
             sum = jiangjin * 0.1
-        elif jiangjin >= 10 and jiangjin < 20:
+        elif jiangjin > 10 and jiangjin < 20:
             sum = 10 * 0.1 + (jiangjin - 10) * 0.075
         elif jiangjin >= 20 and jiangjin < 40:
             sum = 10 * 0.1 + 10 * 0.075 + (jiangjin - 20) * 0.05
         elif jiangjin >= 40 and jiangjin < 60:
             sum = 10 * 0.1 + 10 * 0.075 + 20 * 0.05 + (jiangjin - 40) * 0.03
-        elif jiangjin >= 60 and jiangjin < 100:
+        elif jiangjin > 60 and jiangjin < 100:
             sum = 10 * 0.1 + 10 * 0.075 + 20 * 0.05 + 20 * 0.03 + (jiangjin - 60) * 0.015
         elif jiangjin >= 100:
             sum = 10 * 0.1 + 10 * 0.075 + 20 * 0.05 + 20 * 0.03 + 40 * 0.015 + (jiangjin - 100) * 0.01
