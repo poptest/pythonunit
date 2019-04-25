@@ -3,7 +3,7 @@ import unittest
 
 from junyi.homework.lrjs import LiRunJiSuan
 from ddt import ddt, data, unpack
-
+#pip install ddt
 
 @ddt
 class MyTestCase(unittest.TestCase):
