@@ -36,15 +36,37 @@ class studentMar():
 
     #定义学生的统计的方法
     @classmethod
-    def student_tongji(cls):
-        pass
+    def student_tongji_bysex(cls, sex):
+        count = 0
+        for student in student_list:
+            if student['sex'] == sex:
+                count += 1
+        return count
+
 
     #定义学生的删除的方法
     @classmethod
-    def student_delete(cls):
-        pass
+    def student_delete_byno(cls, no):
+        index = 0
+        for student in student_list:
+            if student['no'] == no:
+                student_list.pop(index)
+            else:
+                index += 1
+
 
     #定义学生的修改的方法
     @classmethod
-    def student_modify(cls):
-        pass
+    def student_modify(cls,  name, age, no, clas, sex):
+        index = 0
+        for student in student_list:
+            if student['no'] == no:
+                break
+            else:
+                index += 1
+
+        target_student = student_list[index]
+        target_student['name'] = name
+        target_student['age'] = age
+        target_student['clas'] = clas
+        target_student['sex'] = sex

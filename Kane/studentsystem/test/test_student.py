@@ -23,5 +23,8 @@ class MyTestCase(unittest.TestCase):
         student=studentMar.student_search_byno("95000")
         print (student)
 
+    #测试通过性别统计的方法
+
+
 if __name__ == '__main__':
     unittest.main()
