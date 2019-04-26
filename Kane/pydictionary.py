@@ -22,7 +22,7 @@ dic["result"]["tel"] = 13429667914
 dic["result"]["name"] = "Kane","Alley"
 
 #根据要求取出相应的数据
-name = dic["result"]["name"]
+name = dic["result"]["name"][0]
 province = dic["result"]["province"]
 city = dic["result"]["city"]
 areacode = dic["result"]["areacode"]
