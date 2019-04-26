@@ -1,15 +1,18 @@
 #-*- encoding:utf-8 -*-
-import random
-shuzi=(random.randint(1, 100))
-print shuzi
-
-while True:
-    oo = int(raw_input("输入一个数字"))
-
-    if oo > shuzi:
-        print ("大了")
-    elif oo < shuzi:
-        print ("小了")
-    elif oo == shuzi:
-        print ("666")
-        break
+class LOL():
+    @classmethod
+    def Q(self):
+        print ("天音波")
+    @classmethod
+    def W(self):
+        print ("金钟罩")
+    @classmethod
+    def E(self):
+        print ("天雷破")
+    @classmethod
+    def R(self):
+        print ("猛龙摆尾")
+LOL.Q()
+LOL.W()
+LOL.E()
+LOL.R()

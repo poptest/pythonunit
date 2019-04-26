@@ -5,9 +5,9 @@ from ddt import ddt, data, unpack
 @ddt
 class MyTestCase(unittest.TestCase):
 
-    @data({"lr": 10, "jj": 9},
-              {"lr": 20, "jj": 9},
-              {"lr": 30, "jj": 10})
+    @data({"lr": 10, "jj": 1},
+         {"lr": 20, "jj": 9},
+         {"lr": 30, "jj": 10})
     @unpack
     def test_case01(self, lr, jj):
 
