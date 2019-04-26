@@ -39,6 +39,3 @@ def count_nv(students, input):
 input=raw_input("请输入‘nan’或者‘nv’")
 student_nv=count_nv(sudent_list, input)
 
-
-for i in [1, 0]:
-    print (i+1)
