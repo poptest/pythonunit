@@ -27,8 +27,12 @@ class studentMar():
 
     #定义学生查询的方法
     @classmethod
-    def student_search(cls):
-        pass
+    def student_search_byno(cls ,no):
+        for student in student_list:
+            if student["no"]==no:
+                return student
+            # else:
+            #     print ("查无此人")
 
     #定义学生的统计的方法
     @classmethod
