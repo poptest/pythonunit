@@ -19,12 +19,23 @@ sudent_list=[
 # print ("一共有%s个女生"%count)
 
 #定义一个方法，实现计算女生的个数
-def count_nv(students):
+def count_nv(students, input):
     count=0
-    for student in students:
-        if student["sex"] == "nv":
-            count+=1
-    return count
+    if input=="nv":
+        for student in students:
+            if student["sex"] == input:
+                count+=1
+        print ("一共有%s个女生"%count)
 
-student_nv=count_nv(sudent_list)
-print ("一共有%s个女生"%student_nv)
+    elif input == "nan":
+        for student in students:
+            if student["sex"] == input:
+                count+=1
+        print ("一共有%s个男生"%count)
+
+
+
+
+input=raw_input("请输入‘nan’或者‘nv’")
+student_nv=count_nv(sudent_list, input)
+
