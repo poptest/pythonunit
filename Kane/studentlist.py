@@ -7,8 +7,13 @@ sudent_list=[
     {"name":"Lily", "age":"12", "sex":"nv"},
     {"name":"Alex", "age":"12", "sex":"nan"},
 ]
-
+count=0
 #通过for循环遍历list中的字典，并通过相应的key等到相应的val
 for student in sudent_list:
     studnet_name=student["name"]
     print ("name:%s"%studnet_name)
+    #判断性别是否为女
+    if(student["sex"]=="nv"):
+        count+=1
+
+print ("一共有%s个女生"%count)
