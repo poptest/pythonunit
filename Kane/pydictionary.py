@@ -24,12 +24,12 @@ dic["result"]["name"] = "Kane"
 #根据要求取出相应的数据
 name = dic["result"]["name"]
 province = dic["result"]["province"]
-cit = dic["result"]["city"]
+city = dic["result"]["city"]
 areacode = dic["result"]["areacode"]
 zip = dic["result"]["zip"]
 company = dic["result"]["company"]
 tel = dic["result"]["tel"]
 
 #拼接字符串，并打印输出
-str="电话号码：%s，姓名：%s，省份：%s，城市：%s，区域编码：%s，邮编：%s，运营商：%s"%(tel, name, province, cit, areacode, zip, company)
+str="电话号码：%s，姓名：%s，省份：%s，城市：%s，区域编码：%s，邮编：%s，运营商：%s"%(tel, name, province, city, areacode, zip, company)
 print (str)
