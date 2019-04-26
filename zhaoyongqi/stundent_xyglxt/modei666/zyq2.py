@@ -29,3 +29,34 @@ class studentMgr():
                 return student
 
 
+    @classmethod
+    def student_serch_by_sex(cls,sex):
+        count=0
+        for student in student_list:
+            if student["sex"] == sex:
+                count +=1
+        return count
+
+    @classmethod
+    def student_serch_by_cla(cls,cla):
+        count=0
+        for student in student_list:
+            if student["cla"] ==cla:
+                count+=1
+        return count
+
+    @classmethod
+    def student_delete_by_tall(cls, tall):
+        index = 0
+        for student in student_list:
+            if student["tall"] == tall:
+              student_list.pop(index)
+            else:
+                index += 1
+
+
+
+
+
+
+
