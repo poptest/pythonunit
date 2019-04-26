@@ -27,27 +27,43 @@ class StudentMgr():
         return student_list
 
     @classmethod
-    def student_search_name(cls,name):
+    def student_search_by_name(cls,name):
         for student in student_list:       #根据名字查询
             if student["name"] == name:
                 return student
 
     @classmethod
-    def student_search_no(cls, no):
-        for student in student_list:
+    def student_search_by_no(cls, no):
+        for student in student_list:       #根据学号查询
             if student["no"] == no:
                 return student
 
 
-
+    @classmethod
+    def student_stat_by_sex(cls,sex):               #根据性别统计
+        count = 0
+        for student in student_list:
+            if student["sex"] == sex:
+                count += 1
+        return count
 
 
     @classmethod
-    def student_stat(cls):        #统计
-        pass
+    def student_delete_by_no(cls,no):                        #删除
+        index = 0
+        for student in student_list:
+            if student["no"] == no:
+                student_list.pop(index)
+            else:
+                index += 1
+
+
     @classmethod
-    def student_delete(cls):       #删除
-        pass
-    @classmethod
-    def student_modify(cls):        #修改
-        pass
+    def student_modify_by_no(cls,name,sex,no,clas,age):                                 #修改
+        index = 0
+        for student in student_list:
+            if student["no"] == no:
+                break
+            else:
+                 index += 1
+
