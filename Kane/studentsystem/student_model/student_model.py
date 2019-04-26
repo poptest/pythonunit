@@ -1,4 +1,4 @@
-# -*- encoding:utf-8 -*-
+# -*- encoding:utf-8 -*
 '''
 定义学员管理模型
 实现：
@@ -8,57 +8,45 @@
 4. 学员注销
 5. 学员信息修改
 '''
+#连接本地的数据列表集
+from Kane.studentsystem.student_database.student_base import student_list
 
-from junyi.homework.student_management.db.student_db import student_list
+class studentMar():
 
-
-class StudentMgr():
-
+    #定义学生注册的方法
     @classmethod
     def student_reg(cls, name, sex, no, clas, age):
         student = {
             "name": name,
             "sex": sex,
             "no": no,
-            "class":clas,
+            "class": clas,
             "age": age
         }
         student_list.append(student)
 
+    #定义学生查询的方法
     @classmethod
-    def student_search_all(cls):
-        return student_list
-
-    @classmethod
-    def student_search_by_name(cls, name):
+    def student_search_byno(cls ,no):
         for student in student_list:
-            if student['name'] == name:
+            if student["no"]==no:
                 return student
+            # else:
+            #     print ("查无此人")
 
+    #定义学生的统计的方法
     @classmethod
-    def student_search_by_no(cls, no):
-        for student in student_list:
-            if student['no'] == no:
-                return student
-
-    @classmethod
-    def student_tongji_by_sex(cls, sex):
+    def student_tongji_bysex(cls, sex):
         count = 0
         for student in student_list:
             if student['sex'] == sex:
                 count += 1
         return count
 
-    @classmethod
-    def student_tongji_by_age(cls, age):
-        count = 0
-        for student in student_list:
-            if student['age'] == age:
-                count += 1
-        return count
 
+    #定义学生的删除的方法
     @classmethod
-    def student_delete_by_no(cls, no):
+    def student_delete_byno(cls, no):
         index = 0
         for student in student_list:
             if student['no'] == no:
@@ -66,8 +54,10 @@ class StudentMgr():
             else:
                 index += 1
 
+
+    #定义学生的修改的方法
     @classmethod
-    def student_modify_by_no(cls, name, age, no, clas, sex):
+    def student_modify(cls,  name, age, no, clas, sex):
         index = 0
         for student in student_list:
             if student['no'] == no:
