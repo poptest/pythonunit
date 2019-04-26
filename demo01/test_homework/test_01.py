@@ -1,7 +1,7 @@
 # -*- encoding:utf-8 -*-
 import unittest
 
-from junyi.homework.lrjs import LiRunJiSuan
+from junyi.homework.demo0425.lrjs import LiRunJiSuan
 from ddt import ddt, data, unpack
 #pip install ddt
 
