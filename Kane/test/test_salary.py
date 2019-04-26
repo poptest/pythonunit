@@ -2,7 +2,7 @@
 import unittest
 
 
-from junyi.homework.lrjs import LiRunJiSuan
+from junyi.homework.demo0425.lrjs import LiRunJiSuan
 
 
 class MyTestCase(unittest.TestCase):
