@@ -21,7 +21,7 @@ class MyTestCase(unittest.TestCase):
           {"lr":10.000001, "jj":1.00000075})
 
     @unpack
-    def case(self, lr, jj):
+    def test_case(self, lr, jj):
         # 1. 测试准备测试数据
         zlr = lr
         # 2. 运行测试步骤，并获取实际结果
