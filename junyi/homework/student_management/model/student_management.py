@@ -11,6 +11,7 @@
 
 from junyi.homework.student_management.db.student_db import student_list
 
+
 class StudentMgr():
 
     @classmethod
@@ -25,17 +26,57 @@ class StudentMgr():
         student_list.append(student)
 
     @classmethod
-    def student_search(cls):
-        pass
+    def student_search_all(cls):
+        return student_list
 
     @classmethod
-    def student_tongji(cls):
-        pass
+    def student_search_by_name(cls, name):
+        for student in student_list:
+            if student['name'] == name:
+                return student
 
     @classmethod
-    def student_delete(cls):
-        pass
+    def student_search_by_no(cls, no):
+        for student in student_list:
+            if student['no'] == no:
+                return student
 
     @classmethod
-    def student_modify(cls):
-        pass
+    def student_tongji_by_sex(cls, sex):
+        count = 0
+        for student in student_list:
+            if student['sex'] == sex:
+                count += 1
+        return count
+
+    @classmethod
+    def student_tongji_by_age(cls, age):
+        count = 0
+        for student in student_list:
+            if student['age'] == age:
+                count += 1
+        return count
+
+    @classmethod
+    def student_delete_by_no(cls, no):
+        index = 0
+        for student in student_list:
+            if student['no'] == no:
+                student_list.pop(index)
+            else:
+                index += 1
+
+    @classmethod
+    def student_modify_by_no(cls, name, age, no, clas, sex):
+        index = 0
+        for student in student_list:
+            if student['no'] == no:
+                break
+            else:
+                index += 1
+
+        target_student = student_list[index]
+        target_student['name'] = name
+        target_student['age'] = age
+        target_student['clas'] = clas
+        target_student['sex'] = sex
