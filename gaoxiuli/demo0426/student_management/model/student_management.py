@@ -74,3 +74,12 @@ class StudentMgr():
                 student_list.pop(index)
             else:
                 index +=1
+
+    @classmethod
+    def student_modify_by_no(cls, name, age, num, clas, sex):
+        index = 0
+        for student in student_list:
+            if student['num'] == num:
+                break
+            else:
+                index += 1
