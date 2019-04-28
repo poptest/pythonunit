@@ -19,14 +19,21 @@ class MyTestCase(unittest.TestCase):
         print(students)
 
 
-    def test_search_name(self):
-        student = StudentMgr.student_search_name("Xiaohui")
+    def test_search_by_name(self):
+        student = StudentMgr.student_search_by_name("Xiaohui")
         print(student)
 
 
-    def test_search_no(self):
-        student = StudentMgr.student_search_no("9529")
+    def test_search_by_no(self):
+        student = StudentMgr.student_search_by_no("9529")
         print(student)
+
+    def test_stat_by_sex(self):
+
+        act_val = StudentMgr.student_stat_by_sex("nan")
+        exp_val = 2
+        self.assertEqual(act_val,exp_val)
+
 
 
 
